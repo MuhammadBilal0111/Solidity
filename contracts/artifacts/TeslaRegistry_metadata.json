@@ -1,0 +1,118 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "model",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "year",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "color",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "mileage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "vin",
+						"type": "string"
+					}
+				],
+				"name": "addTesla",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "teslas",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "model",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "year",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "color",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "mileage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "vin",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Struct.sol": "TeslaRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Struct.sol": {
+			"keccak256": "0x17a762455c97f701c3e3caa6343f5798beffbf98c7b6ca272228fb135449f82d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a02b3335b4a878c1dab05576246eec6d61553f25d2b765b25e84b9aa00bba34e",
+				"dweb:/ipfs/QmRWUNxmYmBd6YFHFiZgNap7BbxAy8m8559xkZP7Ai3cYz"
+			]
+		}
+	},
+	"version": 1
+}
