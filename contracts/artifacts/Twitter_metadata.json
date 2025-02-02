@@ -174,6 +174,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_author",
+						"type": "address"
+					}
+				],
+				"name": "getAllLikes",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "getAllTweets",
 				"outputs": [
@@ -350,11 +369,11 @@
 	},
 	"sources": {
 		"contracts/practice.sol": {
-			"keccak256": "0x2aba79a39b98df30ba5578ec9f82e3bfdf5847cb64e98a54d504e9904b1867b8",
+			"keccak256": "0x1c7b0f7f75ed89c4b99dae5b1fe09fb8c24c9832e69f2eba8f2faf4e77d7dbc5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0273b2963fc6ccf18a21e19995c26e2ea3cb61967571daf723190edd8b089984",
-				"dweb:/ipfs/QmTtz1enyLHHVBg14Q2ZCY7mKUwSSmVmEhg7e2zQ5ECGpA"
+				"bzz-raw://b91c55c09b516253f4b18581aefee9ad9d81b34531032f17206163a482fe7121",
+				"dweb:/ipfs/QmW7yU3AQhmLz79Cc5FGsipyfiaGsuptWzWmTJh4qCrhaE"
 			]
 		}
 	},

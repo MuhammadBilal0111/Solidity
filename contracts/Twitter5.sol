@@ -73,5 +73,12 @@ contract Twitter {
     function getAllTweets(address _owner) public view returns (Tweet[] memory ){
         return tweets[_owner];
     }
+    function getAllLikes(address _author) public view returns (uint){
+        uint totalLikes; // in solidity by default value of variable is zero
+        for(uint i=0;i<tweets[_author].length;i++){
+            totalLikes+=tweets[_author][i].likes;
+        }
+        return totalLikes;
+    }
 
 }
