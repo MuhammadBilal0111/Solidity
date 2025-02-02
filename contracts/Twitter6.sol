@@ -1,8 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
-contract Twitter{
-    uint public MAX_TWEET_LENGTH = 200;
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract Twitter is Ownable{ // Twitter contrat inherites with ownable contract
+    uint public MAX_TWEET_LENGTH = 2;
     struct Tweet{
         uint256 id;
         address author;
@@ -10,21 +12,15 @@ contract Twitter{
         uint256 timestamp;
         uint256 likes;
     }
-    address public _owner;
 
     event TweetCreated(uint256 id, address author, string content, uint256 timestamp);
     event TweetLiked(address liker, address tweetAuthor,uint256 tweetId, uint256 newLikeCount);
     event TweetDisliked(address disLiker, address tweetAuthor,uint256 tweetId, uint256 newDisikeCount);
 
-    constructor(){
-        _owner=msg.sender;
-    }
+    constructor() Ownable(msg.sender){} // calling the Ownable constructor.
+    
     mapping(address=>Tweet[]) public tweets;
 
-    modifier onlyOwner(){
-        require(_owner == msg.sender,"You are not registered");
-        _;
-    }
     function createTweet(string memory _tweet) public {
         require(bytes(_tweet).length < MAX_TWEET_LENGTH,"Tweet is too long!");
         Tweet memory newTweet = Tweet({
