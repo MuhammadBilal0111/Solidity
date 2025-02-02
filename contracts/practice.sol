@@ -26,7 +26,7 @@ contract Twitter{
         _;
     }
     function createTweet(string memory _tweet) public {
-        require(bytes(_tweet).length >= MAX_TWEET_LENGTH,"Tweet is too long!");
+        require(bytes(_tweet).length < MAX_TWEET_LENGTH,"Tweet is too long!");
         Tweet memory newTweet = Tweet({
             id:tweets[msg.sender].length,
             author:msg.sender,
@@ -57,6 +57,4 @@ contract Twitter{
     function changeTweetLength(uint newTweetLength) public onlyOwner{
         MAX_TWEET_LENGTH = newTweetLength;
     }
-
-
 }

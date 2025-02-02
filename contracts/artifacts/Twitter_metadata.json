@@ -350,11 +350,11 @@
 	},
 	"sources": {
 		"contracts/practice.sol": {
-			"keccak256": "0x570ee16d741723fa0cb21df85257e951c144223b0a3dc5642cf885cce355b939",
+			"keccak256": "0x2aba79a39b98df30ba5578ec9f82e3bfdf5847cb64e98a54d504e9904b1867b8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://07fc88e53a8770f2576111f763d47a60aa26ab47e9131b9eb22a3a03bb3e9332",
-				"dweb:/ipfs/QmPhZL1Pf6DdC3oi2BPHHXqGnV1qfZcxR8zq3LF1Cc12bu"
+				"bzz-raw://0273b2963fc6ccf18a21e19995c26e2ea3cb61967571daf723190edd8b089984",
+				"dweb:/ipfs/QmTtz1enyLHHVBg14Q2ZCY7mKUwSSmVmEhg7e2zQ5ECGpA"
 			]
 		}
 	},
