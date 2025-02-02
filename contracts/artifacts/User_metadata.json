@@ -9,47 +9,44 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_userContractAddress",
+						"name": "_playerAddress",
 						"type": "address"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "gameCount",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
+					},
 					{
 						"internalType": "string",
-						"name": "_userName",
+						"name": "_playerName",
 						"type": "string"
 					}
 				],
-				"name": "startGame",
+				"name": "createPlayer",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "userContract",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "contract IUser",
+						"internalType": "address",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"name": "players",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "playerAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "playerName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "score",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -69,7 +66,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Interaction-Between-Contracts-Game.sol": "Game"
+			"contracts/Interaction-Between-Contracts-User.sol": "User"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -83,12 +80,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Interaction-Between-Contracts-Game.sol": {
-			"keccak256": "0x7ea5f23f76a1cf3621929f339f539ca33bc02b7235fe9ac484857df647bdf167",
+		"contracts/Interaction-Between-Contracts-User.sol": {
+			"keccak256": "0x4d047628d211309535af8976ce21a2305bd560cd9b97612dc7ca440eb623869c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://457b3705b6453498121922d4e8fb17759d34c406805531e446f415854b238831",
-				"dweb:/ipfs/QmU5uurUaVUmiPM9CPbGTF6cGAdvhF44YvNT4eBfQtuMpa"
+				"bzz-raw://ff35d037dc3bf318f6ff8cb93978219ad78b2b423e1dedb1536bddd9495fd88d",
+				"dweb:/ipfs/QmVMDoLNsVCThqtfXp8VhpwYyCB9SSEDzu37NPdPC2bmkf"
 			]
 		}
 	},
