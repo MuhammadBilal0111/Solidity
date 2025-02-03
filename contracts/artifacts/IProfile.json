@@ -76,7 +76,7 @@
 							"type": "string"
 						}
 					],
-					"internalType": "struct IUser.UserProfile",
+					"internalType": "struct IProfile.UserProfile",
 					"name": "",
 					"type": "tuple"
 				}

@@ -28,7 +28,7 @@
 								"type": "string"
 							}
 						],
-						"internalType": "struct IUser.UserProfile",
+						"internalType": "struct IProfile.UserProfile",
 						"name": "",
 						"type": "tuple"
 					}
@@ -50,7 +50,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Twitter-Interaction-Main.sol": "IUser"
+			"contracts/Twitter-Interaction-Main.sol": "IProfile"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -81,11 +81,11 @@
 			]
 		},
 		"contracts/Twitter-Interaction-Main.sol": {
-			"keccak256": "0x40d7165a745fbc1fc02df3d96490b5f2806bfca0ba4ae1effa746f1d607ce42f",
+			"keccak256": "0x772adaea2eeaa1171812150d2fc9fa546fe61ec8a959230c90bad37e00cd4297",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://64073e9acc77733f7677ca0d6733c678ccf0073bb2c1147863ecf7a856a28bcb",
-				"dweb:/ipfs/QmZpHe4VamWqL1dKmn8ojt7GHNCpjQH5hCUtYmGqoo3Rft"
+				"bzz-raw://27621e81ec3e71e895d2617013db1c294ea3f9c1d2abead151d0452d71cda0d7",
+				"dweb:/ipfs/QmQo17HFynuaif6qZXUTKCYYRS8fd3EuyP6eUaYQDzXu3N"
 			]
 		}
 	},

@@ -6,7 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_profileContractAddress",
+						"type": "address"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -339,6 +345,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "profileContract",
+				"outputs": [
+					{
+						"internalType": "contract IProfile",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "renounceOwnership",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -437,7 +456,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Twitter6.sol": "Twitter"
+			"contracts/Twitter-Interaction-Main.sol": "Twitter"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -467,12 +486,12 @@
 				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
 			]
 		},
-		"contracts/Twitter6.sol": {
-			"keccak256": "0x470c86e0353b7e5b29cda32fd8fa3fa1fbd1ec737e6986a6ff84595b5e8a5f54",
+		"contracts/Twitter-Interaction-Main.sol": {
+			"keccak256": "0x772adaea2eeaa1171812150d2fc9fa546fe61ec8a959230c90bad37e00cd4297",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://dfd312f431cc17058c2f9cf36116c0fd04b9570c9ff79de81d7b66c156509bac",
-				"dweb:/ipfs/QmRXvfHfMLLKJEto1KgwE6CTS5jTM9L69EyxDKV28bFMyy"
+				"bzz-raw://27621e81ec3e71e895d2617013db1c294ea3f9c1d2abead151d0452d71cda0d7",
+				"dweb:/ipfs/QmQo17HFynuaif6qZXUTKCYYRS8fd3EuyP6eUaYQDzXu3N"
 			]
 		}
 	},
