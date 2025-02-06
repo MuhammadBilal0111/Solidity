@@ -6,56 +6,9 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_profileContractAddress",
-						"type": "address"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					}
-				],
-				"name": "OwnableInvalidOwner",
-				"type": "error"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "account",
-						"type": "address"
-					}
-				],
-				"name": "OwnableUnauthorizedAccount",
-				"type": "error"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "previousOwner",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "newOwner",
-						"type": "address"
-					}
-				],
-				"name": "OwnershipTransferred",
-				"type": "event"
 			},
 			{
 				"anonymous": false,
@@ -94,37 +47,6 @@
 					{
 						"indexed": false,
 						"internalType": "address",
-						"name": "disLiker",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "tweetAuthor",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "tweetId",
-						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "newDisikeCount",
-						"type": "uint256"
-					}
-				],
-				"name": "TweetDisliked",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "address",
 						"name": "liker",
 						"type": "address"
 					},
@@ -151,13 +73,44 @@
 				"type": "event"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "unliker",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "tweetAuthor",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "tweetId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newLikeCount",
+						"type": "uint256"
+					}
+				],
+				"name": "TweetUnliked",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "MAX_TWEET_LENGTH",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "uint16",
 						"name": "",
-						"type": "uint256"
+						"type": "uint16"
 					}
 				],
 				"stateMutability": "view",
@@ -166,9 +119,9 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "uint16",
 						"name": "newTweetLength",
-						"type": "uint256"
+						"type": "uint16"
 					}
 				],
 				"name": "changeTweetLength",
@@ -193,24 +146,6 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "author",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "id",
-						"type": "uint256"
-					}
-				],
-				"name": "dislikeTweet",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
 						"name": "_author",
 						"type": "address"
 					}
@@ -227,7 +162,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
 				"name": "getAllTweets",
 				"outputs": [
 					{
@@ -325,7 +266,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "likedTweet",
+				"name": "likeTweet",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -341,39 +282,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "profileContract",
-				"outputs": [
-					{
-						"internalType": "contract IProfile",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "renounceOwnership",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "newOwner",
-						"type": "address"
-					}
-				],
-				"name": "transferOwnership",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -419,33 +327,29 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "author",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "unlikeTweet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
-			"errors": {
-				"OwnableInvalidOwner(address)": [
-					{
-						"details": "The owner is not a valid owner account. (eg. `address(0)`)"
-					}
-				],
-				"OwnableUnauthorizedAccount(address)": [
-					{
-						"details": "The caller account is not authorized to perform an operation."
-					}
-				]
-			},
 			"kind": "dev",
-			"methods": {
-				"owner()": {
-					"details": "Returns the address of the current owner."
-				},
-				"renounceOwnership()": {
-					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
-				},
-				"transferOwnership(address)": {
-					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
-				}
-			},
+			"methods": {},
 			"version": 1
 		},
 		"userdoc": {
@@ -456,7 +360,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Twitter-Interaction-Main.sol": "Twitter"
+			"contracts/Twitter5.sol": "Twitter"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -470,28 +374,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"@openzeppelin/contracts/access/Ownable.sol": {
-			"keccak256": "0xff6d0bb2e285473e5311d9d3caacb525ae3538a80758c10649a4d61029b017bb",
+		"contracts/Twitter5.sol": {
+			"keccak256": "0xa6ccd87cc0ca378f6a1fd73ad1233f552d304aae75f866d58eb2c4ba0f0da651",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8ed324d3920bb545059d66ab97d43e43ee85fd3bd52e03e401f020afb0b120f6",
-				"dweb:/ipfs/QmfEckWLmZkDDcoWrkEvMWhms66xwTLff9DDhegYpvHo1a"
-			]
-		},
-		"@openzeppelin/contracts/utils/Context.sol": {
-			"keccak256": "0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://6a708e8a5bdb1011c2c381c9a5cfd8a9a956d7d0a9dc1bd8bcdaf52f76ef2f12",
-				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
-			]
-		},
-		"contracts/Twitter-Interaction-Main.sol": {
-			"keccak256": "0x772adaea2eeaa1171812150d2fc9fa546fe61ec8a959230c90bad37e00cd4297",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://27621e81ec3e71e895d2617013db1c294ea3f9c1d2abead151d0452d71cda0d7",
-				"dweb:/ipfs/QmQo17HFynuaif6qZXUTKCYYRS8fd3EuyP6eUaYQDzXu3N"
+				"bzz-raw://41a5b96b7ac61c65eeddbc860022d860eacf420c3d627947174eca96a27d81d1",
+				"dweb:/ipfs/QmVKBukA2Uo6YBbxSauCdJUXeubxmSLuqyUymrBoY5w7sw"
 			]
 		}
 	},

@@ -32,10 +32,10 @@ contract Twitter is Ownable{ // Twitter contract inherites with ownable contract
 
     constructor(address _profileContractAddress) Ownable(msg.sender){
         profileContract = IProfile(_profileContractAddress); // now the communication contract is made
-    } // calling the Ownable constructor.
-    
-    mapping(address=>Tweet[]) public tweets;
+    } // calling the Ownable constructor
 
+    mapping(address=>Tweet[]) public tweets;
+    
     function createTweet(string memory _tweet) public onlyRegistered{
         require(bytes(_tweet).length < MAX_TWEET_LENGTH,"Tweet is too long!");
         Tweet memory newTweet = Tweet({
